@@ -101,4 +101,6 @@ app.get('*', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Web server stared on port ${port}`);
+    console.log(`http://127.0.0.1:${port}`);
+
 });
