@@ -12,7 +12,9 @@ function forecast ({ latitude, longitude }, cb) {
             const {
                 currently: {
                     temperature,
-                    precipProbability
+                    precipProbability,
+                    windSpeed,
+                    windGust
                 },
                 daily: {
                     data: [
@@ -21,7 +23,7 @@ function forecast ({ latitude, longitude }, cb) {
                 }
             } = body;
 
-            cb(null, `${summary} It is currently ${temperature} degrees out there. There is a ${precipProbability}% chance of rain.`);
+            cb(null, `${summary} It is currently ${temperature} degrees out there. There is a ${precipProbability}% chance of rain. Current wind speed is ${windSpeed}m/s with gusts up to ${windGust}m/s.`);
         }
     });
 }
