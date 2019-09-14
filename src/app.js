@@ -38,7 +38,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help page',
         name: 'Orbry',
-        message: 'If you are hurt - see a doctor!'
+        message: 'If you are hurt - see a doctor immediately!'
     });
 });
 
